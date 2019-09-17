@@ -24,9 +24,10 @@ class Login extends React.Component {
         axiosWithAuth()
             .post("/login", this.state.credentials)
             .then(res => {
+                console.log('clicked', res)
                 localStorage.setItem("token", res.data.payload);
                 // redirect to the apps main page?
-                this.props.history.push("/List");
+                this.props.history.push("/list");
             })
             .catch(err => console.log(err));
     };

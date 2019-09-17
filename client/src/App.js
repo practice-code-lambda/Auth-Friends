@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <PrivateRoute path={"/friends"} component={List} />
+      <PrivateRoute path={"/list"} component={List} />
       <Route exact path={"/"} component={home} />
       <Route path={"/login"} component={Login} />
 
