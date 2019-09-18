@@ -1,4 +1,5 @@
 import React from 'react';
+import Friend from '../components/Friend'
 
 
 import { axiosWithAuth } from '../utils/axiosWithAuth';
@@ -32,8 +33,8 @@ class GasPrices extends React.Component {
         return (
             <div>
                 {
-                    this.state.friends && this.state.friends.map((cur) => {
-                        return <p>{cur.name}</p>
+                    this.state.friends && this.state.friends.map((aFriend) => {
+                        return <Friend aFriend={aFriend} />
                     })
                 }
             </div>
