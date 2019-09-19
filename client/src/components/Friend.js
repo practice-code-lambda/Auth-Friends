@@ -26,7 +26,7 @@ const Friend = (props) => {
             <p>name: {aFriend.name}</p>
             <p>age: {aFriend.age}</p>
             <p>email: {aFriend.email}</p>
-            <button onClick={() => getIdForPut(aFriend, updateBoolean)}>edit friend</button>
+            <button onClick={() => getIdForPut(aFriend, updateBoolean)}>edit</button>
             <button onClick={() => deleteData(aFriend.id)}>delete</button>
         </Card>
     );

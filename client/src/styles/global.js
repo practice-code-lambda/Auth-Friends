@@ -124,7 +124,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: .2;
     resize: none;
     &:focus {
-        background-color: lightgrey;
+      
     }
     &:invalid {
       box-shadow: none;
