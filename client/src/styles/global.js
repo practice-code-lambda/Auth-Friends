@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   } 
   li{
       display: inline-block;
-      margin: 10px;
+      margin: 20px;
       color: black;
       font-size: 20px;
   }
