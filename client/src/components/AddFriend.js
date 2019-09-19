@@ -55,18 +55,21 @@ class AddFriend extends React.Component {
                         name="name"
                         value={this.state.friends.name}
                         onChange={this.handleChange}
+                        placeholder="name"
                     />
                     <input
                         type="text"
                         name="age"
                         value={this.state.friends.age}
                         onChange={this.handleChange}
+                        placeholder="age"
                     />
                     <input
                         type="text"
                         name="email"
                         value={this.state.friends.email}
                         onChange={this.handleChange}
+                        placeholder="email"
                     />
                     {
                         !this.props.updateBoolean && <button>add friend</button>
