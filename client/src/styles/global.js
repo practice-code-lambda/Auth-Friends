@@ -110,7 +110,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 5px;
     border-radius: 3px;
     border: 1px solid black;
-    margin-top:10px;
+    margin:5px;
   }
   input {
     font-family: inherit;

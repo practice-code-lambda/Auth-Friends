@@ -40,6 +40,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
+
                 <form onSubmit={this.login}>
                     <input
                         type="text"
@@ -58,6 +59,7 @@ class Login extends React.Component {
                     <button>Log in</button>
                     <button onClick={this.logout}>Log out</button>
                 </form>
+                <p>username and password are 'a'</p>
             </div>
         );
     }
