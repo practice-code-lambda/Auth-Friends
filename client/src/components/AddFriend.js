@@ -30,13 +30,6 @@ class AddFriend extends React.Component {
             axiosWithAuth()
                 .post("/friends", this.state.friends)
                 .then(res => {
-                    this.setState({
-                        friends: {
-                            name: "",
-                            age: "",
-                            email: ""
-                        }
-                    })
                     this.props.history.push("/friends");
                 })
                 .catch(err => console.log(err));
@@ -47,6 +40,7 @@ class AddFriend extends React.Component {
                 .put(`/friends/${props.updateFriend.id}`, this.state.friends)
                 .then(res => {
                     props.hideUpdate()
+                    props.setFriend("")
                     this.props.history.push("/friends");
                 })
                 .catch(err => console.log(err));

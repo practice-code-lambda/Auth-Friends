@@ -30,7 +30,7 @@ function App(props) {
       <h1>You are all my friends!</h1>
       <Header />
       <PrivateRoute path={"/friends"} getIdForPut={getIdForPut} component={List} />
-      <PrivateRoute path={"/addfriend"} component={AddFriend} updateFriend={friend} updateBoolean={updateBoolean} hideUpdate={hideUpdate} />
+      <PrivateRoute path={"/addfriend"} component={AddFriend} setFriend={setFriend} updateFriend={friend} updateBoolean={updateBoolean} hideUpdate={hideUpdate} />
       {/* pass id back down to add friend to do update form */}
       <Route path={"/login"} component={Login} />
     </div>
