@@ -31,6 +31,11 @@ class Login extends React.Component {
             })
             .catch(err => console.log(err));
     };
+    logout = () => {
+        localStorage.clear()
+        this.props.history.push("/login");
+
+    }
 
     render() {
         return (
@@ -51,6 +56,7 @@ class Login extends React.Component {
                         onChange={this.handleChange}
                     />
                     <button>Log in</button>
+                    <button onClick={this.logout}>Log out</button>
                 </form>
             </div>
         );
