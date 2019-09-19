@@ -11,39 +11,39 @@ let nextId = 7;
 let friends = [
   {
     id: 1,
-    name: 'Ben',
+    name: 'Adan',
     age: 30,
-    email: 'ben@lambdaschool.com'
+    email: 'kirbyfan@lambdaschool.com'
   },
   {
     id: 2,
-    name: 'Austen',
+    name: 'Brandon',
     age: 45,
-    email: 'austen@lambdaschool.com'
+    email: 'boardgamer@lambdaschool.com'
   },
   {
     id: 3,
-    name: 'Ryan',
+    name: 'Daniel',
     age: 15,
-    email: 'ryan@lambdaschool.com'
+    email: '1monitorchampion@lambdaschool.com'
   },
   {
     id: 4,
-    name: 'Dustin',
+    name: 'Jonathan',
     age: 25,
-    email: 'D-munny@lambdaschool.com'
+    email: 'obiwoncodenobi@lambdaschool.com'
   },
   {
     id: 5,
-    name: 'Sean',
+    name: 'LC',
     age: 35,
-    email: 'sean@lambdaschool.com'
+    email: 'getoffmyscreen@lambdaschool.com'
   },
   {
     id: 6,
-    name: 'Michelle',
+    name: 'Sallysal',
     age: 67,
-    email: 'michelle@gmail.com'
+    email: 'Neo@gmail.com'
   }
 ];
 

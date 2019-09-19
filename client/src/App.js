@@ -8,12 +8,10 @@ import List from './components/List'
 import AddFriend from './components/AddFriend'
 import PrivateRoute from './components/PrivateRoute'
 
-
 function App(props) {
 
   const [friend, setFriend] = useState()
   const [updateBoolean, setUpdateBoolean] = useState()
-
 
   const getIdForPut = (friend) => {
     setFriend(friend)
@@ -29,14 +27,12 @@ function App(props) {
 
   return (
     <div className="App">
+      <h1>You are all my friends!</h1>
       <Header />
       <PrivateRoute path={"/friends"} getIdForPut={getIdForPut} component={List} />
       <PrivateRoute path={"/addfriend"} component={AddFriend} updateFriend={friend} updateBoolean={updateBoolean} hideUpdate={hideUpdate} />
       {/* pass id back down to add friend to do update form */}
       <Route path={"/login"} component={Login} />
-
-
-
     </div>
   );
 }

@@ -7,12 +7,9 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 class List extends React.Component {
 
-
     componentDidMount() {
         this.getData();
     };
-
-
 
     constructor(props) {
         super(props)
@@ -44,9 +41,7 @@ class List extends React.Component {
                 })
                 .catch(err => console.log(err));
         };
-
     }
-
     render() {
         console.log('state in List', this.state)
 

@@ -25,9 +25,6 @@ class AddFriend extends React.Component {
                 }
             });
         };
-
-
-
         this.addFriend = e => {
             e.preventDefault();
             axiosWithAuth()
@@ -38,7 +35,6 @@ class AddFriend extends React.Component {
                 .catch(err => console.log(err));
             ;
         }
-
         this.updateFriend = () => {
             axiosWithAuth()
                 .put(`/friends/${props.updateFriend.id}`, this.state.friends)
