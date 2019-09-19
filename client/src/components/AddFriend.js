@@ -4,14 +4,18 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 class AddFriend extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            friends: {
-                name: "",
-                age: "",
-                email: ""
-            }
-        };
 
+        if (props.updateFriend) {
+            this.state = { friends: props.updateFriend }
+        } else {
+            this.state = {
+                friends: {
+                    name: "",
+                    age: "",
+                    email: ""
+                }
+            };
+        }
         this.handleChange = e => {
             console.log(this.props)
             this.setState({
@@ -22,14 +26,24 @@ class AddFriend extends React.Component {
             });
         };
 
-        this.addfriend = e => {
+
+
+        this.addFriend = e => {
             e.preventDefault();
-            // axiosWithAuth ==> ?? an axios instance; .post() ==> ?? promise
             axiosWithAuth()
                 .post("/friends", this.state.friends)
                 .then(res => {
-                    console.log('clicked', res)
-                    // redirect to the apps main page?
+                    this.props.history.push("/friends");
+                })
+                .catch(err => console.log(err));
+            ;
+        }
+
+        this.updateFriend = () => {
+            axiosWithAuth()
+                .put(`/friends/${props.updateFriend.id}`, this.state.friends)
+                .then(res => {
+                    props.hideUpdate()
                     this.props.history.push("/friends");
                 })
                 .catch(err => console.log(err));
@@ -39,7 +53,7 @@ class AddFriend extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.addfriend}>
+                <form onSubmit={this.addFriend}>
                     <input
                         type="text"
                         name="name"
@@ -58,8 +72,15 @@ class AddFriend extends React.Component {
                         value={this.state.friends.email}
                         onChange={this.handleChange}
                     />
-                    <button>add friend</button>
+                    {
+                        !this.props.updateBoolean && <button>add friend</button>
+                    }
+
                 </form>
+                {
+                    this.props.updateBoolean && <button onClick={this.updateFriend}>update</button>
+                }
+
             </div>
         );
     }
