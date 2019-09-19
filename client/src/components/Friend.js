@@ -12,7 +12,8 @@ border: 1px solid black;
         margin: 4px;
     }
     button{
-        margin-bottom: 4px;
+        margin: 4px;
+
     }
 `
 const Friend = (props) => {
@@ -22,10 +23,11 @@ const Friend = (props) => {
 
     return (
         <Card>
-            <p onClick={() => deleteData(aFriend.id)}>name: {aFriend.name}</p>
+            <p>name: {aFriend.name}</p>
             <p>age: {aFriend.age}</p>
             <p>email: {aFriend.email}</p>
             <button onClick={() => getIdForPut(aFriend, updateBoolean)}>edit friend</button>
+            <button onClick={() => deleteData(aFriend.id)}>delete</button>
         </Card>
     );
 }
