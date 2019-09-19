@@ -25,7 +25,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <h1>You are all my friends!</h1>
+      <h1>You are all my friend!</h1>
       <Header />
       <PrivateRoute
         path={"/friends"}
